@@ -99,23 +99,23 @@ To remove the 0-3.3V input voltage limitation (and do whatever signal conditioni
 ## Advertising and in-app purchase
 The free (zero cost) version of the app is limited to one channel. A single banner ad may be displayed at the top of the screen. To enable the extra channel(s) and remove all advertising, a small in-app purchase is required (approx. US$1 for a yearly subscription or US$2 for a lifetime purchase - exact price depends on your location).
 
-## Gallery
+## แกลลอรี่
 ![Scoppy Oscilloscope App](images/scoppy-v2-running-2ch.jpg)
-Screenshot
+ภาพหน้าจอ
 
 ![Scoppy Development](images/phone-breadboard-pico-afe.jpg)
-Scoppy app on a Nokia 2.1
+แอพ Scoopy บน Nokia 2.1
 
 ![Scoppy Logic Analyser](images/logic-analyzer-demo.jpg)
-Logic Analyzer mode
+โหมดตัววิเคราะห์ลอจิก
 
 ![Scoppy FFT](images/screenshot_fft-square.jpg)
-FFT of a square wave
+FFT ของคลื่นสี่เหลี่ยม
 
 ![Scoppy FFT Both Channels](images/screenshot_fft-2ch.jpg)
-FFT showing both channels and the YT (scope) window
+FFT แสดงทั้งช่องและหน้าต่าง YT (ขอบเขต)
 
 ![Scoppy XY + YT](images/screenshot_xy-yt.jpg)
-X-Y and YT displayed simultaneously
+X-Y และ YT แสดงพร้อมกัน
 
 
