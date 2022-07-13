@@ -1,48 +1,47 @@
-> If you are looking for the Scopy Oscilloscope by Analog Devices you can find it [here](https://wiki.analog.com/university/tools/m2k/scopy/oscilloscope).
+> หากคุณกำลังมองหา Scopy Oscilloscope โดย Analog Devices คุณสามารถค้นหาได้ [here](https://wiki.analog.com/university/tools/m2k/scopy/oscilloscope).
 
 # Scoppy
-Scoppy is an oscilloscope and logic analyzer powered by your Android phone/tablet and Raspberry Pi Pico. Signals are measured by the Pico and the waveforms are displayed on the Android device. No programming is required and both the app and firmware are free to download (the [firmware](https://github.com/fhdm-dev/scoppy-pico) is open-source). Installation is super easy and should only take a few minutes.
+Scoppy เป็นออสซิลโลสโคปและตัววิเคราะห์ลอจิกที่ขับเคลื่อนโดยโทรศัพท์/แท็บเล็ต Android และ Raspberry Pi Pico Pico วัดสัญญาณและรูปคลื่นจะแสดงบนอุปกรณ์ Android ไม่จำเป็นต้องเขียนโปรแกรมใดๆ และทั้งแอปและเฟิร์มแวร์สามารถดาวน์โหลดได้ฟรี ([เฟิร์มแวร์](https://github.com/fhdm-dev/scoppy-pico) เป็นโอเพ่นซอร์ส) การติดตั้งทำได้ง่ายมากและใช้เวลาเพียงไม่กี่นาที
 
-The aim of the Scoppy project is to give electronics novices and hobbyists and STEM students access to an ultra-ultra cheap oscilloscope that is useful for viewing low voltage, low frequency signals. Scoppy is also a logic analyzer with a sample rate of 25MS/s.
+เป้าหมายของโครงการ Scoppy คือการให้สามเณรอิเล็กทรอนิกส์และมือสมัครเล่นและนักเรียน STEM เข้าถึงออสซิลโลสโคปราคาถูกพิเศษซึ่งเป็นประโยชน์สำหรับการดูสัญญาณแรงดันไฟฟ้าต่ำและความถี่ต่ำ Scoppy ยังเป็นเครื่องวิเคราะห์ลอจิกด้วยอัตราการสุ่มตัวอย่าง 25MS/s
 
-## What you'll need
-* An Android device that's running Android version 6.0 (Marshmallow) or higher. The device must also support USB OTG (On-The-Go) - most modern phones/tablets do (if you don't see the app when browsing the Play Store then your device probably doesn't support this feature)
-* A USB OTG adapter/cable compatible with your phone/tablet (available for a few dollars)
-* A Rasperry Pi Pico board
+## สิ่งที่คุณต้องการ
+* อุปกรณ์ Android ที่ใช้ Android เวอร์ชัน 6.0 (Marshmallow) ขึ้นไป อุปกรณ์ต้องรองรับ USB OTG (On-The-Go) ด้วย - โทรศัพท์/แท็บเล็ตที่ทันสมัยส่วนใหญ่รองรับ (หากคุณไม่เห็นแอปเมื่อเรียกดู Play Store แสดงว่าอุปกรณ์ของคุณอาจไม่รองรับคุณสมบัตินี้)
+* อะแดปเตอร์/สายเคเบิล USB OTG ที่เข้ากันได้กับโทรศัพท์/แท็บเล็ตของคุณ (มีให้ในราคาไม่กี่ดอลลาร์)
+* บอร์ด Raspberry Pi Pico
 
-> Important    
-> Please use the latest versions of the App (v1.018) and Firmware (v10). Older versions of the firmware may not work with the latest version of the app and vice versa
-
+> สำคัญ
+> โปรดใช้แอปเวอร์ชันล่าสุด (v1.018) และเฟิร์มแวร์ (v10) เฟิร์มแวร์เวอร์ชันเก่าอาจไม่ทำงานกับแอปเวอร์ชันล่าสุดและในทางกลับกัน
 
 ## Quick Start
 
-### 1. Install the Scoppy Android App
-Install the [Scoppy Android app](https://play.google.com/store/apps/details?id=xyz.fhdm.scoppy) from the Play Store.
+### 1. ติดตั้งแอพ Scoppy Android
+ติดตั้ง [แอป Scoppy Android](https://play.google.com/store/apps/details?id=xyz.fhdm.scoppy) จาก Play Store
 
-### 2. Install the firmware onto your Pico
+### 2. ติดตั้งเฟิร์มแวร์ลงใน Pico . ของคุณ
 
-Download the firmware onto your computer. It is here: [pico-scoppy-v10.uf2](https://fhdm-dev.github.io/downloads/scoppy-pico-v10.uf2). Alternatively you can [build the uf2 file](https://github.com/fhdm-dev/scoppy-pico) from the sources.
+ดาวน์โหลดเฟิร์มแวร์ลงในคอมพิวเตอร์ของคุณ มันอยู่ที่นี่: [pico-scoppy-v10.uf2](https://fhdm-dev.github.io/downloads/scoppy-pico-v10.uf2) หรือคุณสามารถ [สร้างไฟล์ uf2] (https://github.com/fhdm-dev/scoppy-pico) จากแหล่งที่มา
 
-Press the bootsel button on your Pico and connect it to your computer. Copy the uf2 file onto your Pico. The onboard LED should start blinking.
+กดปุ่มบูทเซลบน Pico ของคุณและเชื่อมต่อกับคอมพิวเตอร์ของคุณ คัดลอกไฟล์ uf2 ไปยัง Pico ของคุณ ไฟ LED ออนบอร์ดควรเริ่มกะพริบ
 
-### 3. Connect the Pico to your Phone/Tablet
-Attach the OTG adapter/cable to the USB input of the Android device. The other end attaches to the USB cable you have connected to your Pico. Once connected, Android will probably ask you to allow Scoppy permission to use the USB device.
+### 3. เชื่อมต่อ Pico กับโทรศัพท์/แท็บเล็ตของคุณ
+ต่ออะแดปเตอร์/สายเคเบิล OTG เข้ากับอินพุต USB ของอุปกรณ์ Android ปลายอีกด้านเชื่อมต่อกับสาย USB ที่คุณเชื่อมต่อกับ Pico ของคุณ เมื่อเชื่อมต่อแล้ว Android อาจขอให้คุณอนุญาตให้ Scoppy ใช้อุปกรณ์ USB
 
-### 4. Start Scoppying!
-Attach the +ve output of your signal source to GPIO26 of the Pico and the ground to gnd. This will allow you to measure signals between 0V and 3.3V. Of course the signal voltage should be within the allowed range of the ADC pins of the RP2040. See section 5.2.3 of the RP2040 Datasheet for more information. For Channel 2, connect the signal to GPIO27. 
+### 4. เริ่ม Scoppy!
+แนบเอาต์พุต +ve ของแหล่งสัญญาณของคุณเข้ากับ GPIO26 ของ Pico และต่อกราวด์เข้ากับ gnd ซึ่งจะช่วยให้คุณสามารถวัดสัญญาณระหว่าง 0V ถึง 3.3V แน่นอนว่าแรงดันสัญญาณควรอยู่ภายในช่วงที่อนุญาตของพิน ADC ของ RP2040 ดูหัวข้อ 5.2.3 ของแผ่นข้อมูล RP2040 สำหรับข้อมูลเพิ่มเติม สำหรับช่อง 2 ให้เชื่อมต่อสัญญาณกับ GPIO27
 
-> You might want to insert a current limiting resistor (eg 100R) between the signal source and the pico ADC (GPIO26/27) to limit the current through the Pico ESD diodes in case you accidentally apply a voltage higher than 3.3V.
+> คุณอาจต้องการใส่ตัวต้านทานจำกัดกระแส (เช่น 100R) ระหว่างแหล่งสัญญาณและ pico ADC (GPIO26/27) เพื่อจำกัดกระแสผ่านไดโอด Pico ESD ในกรณีที่คุณใช้แรงดันไฟฟ้าที่สูงกว่า 3.3V โดยไม่ได้ตั้งใจ
 
-If you don't have a suitable signal source you can view the test signal on GPIO 22 by connecting it directly to the ADC pins (GPIO 26 and 27). GPIO 22 is a 1kHz square wave with a duty cycle of 50%.
+หากคุณไม่มีแหล่งสัญญาณที่เหมาะสม คุณสามารถดูสัญญาณทดสอบบน GPIO 22 ได้โดยเชื่อมต่อโดยตรงกับพิน ADC (GPIO 26 และ 27) GPIO 22 เป็นคลื่นสี่เหลี่ยม 1kHz ที่มีรอบการทำงาน 50%
 
-## Logic Analyzer
-To use Scoppy as a logic analyzer tap the Menu button and then the Mode button and tap 'Logic Analyzer'. The logic analyzer inputs are GPIOs 6 to 13. Please remember to only apply voltages of between 0 and 3.3V to these pins.
+## ตัววิเคราะห์ลอจิก
+หากต้องการใช้ Scoppy เป็นเครื่องมือวิเคราะห์ลอจิก ให้แตะปุ่มเมนู จากนั้นแตะปุ่มโหมด แล้วแตะ 'ตัววิเคราะห์ลอจิก' อินพุตตัววิเคราะห์ลอจิกคือ GPIO 6 ถึง 13 โปรดอย่าลืมใช้แรงดันไฟฟ้าระหว่าง 0 ถึง 3.3V กับพินเหล่านี้เท่านั้น
 
-## Detailed installation and usage instructions
-See the [documentation](https://oscilloscope.fhdm.xyz/)
+## คำแนะนำในการติดตั้งและการใช้งานโดยละเอียด
+ดู[เอกสารประกอบ](https://oscilloscope.fhdm.xyz/)
 
-## Discussions/Forum
-Go to the [Discussions](https://github.com/fhdm-dev/scoppy/discussions) section of this repository to well ... discuss Scoppy. For example, ask and answer questions, give feedback, request features, report bugs, share your front-end designs or comment on just about anything related to Scoppy, Oscilloscopes, Logic Analyzers or electronics in general.
+## กระดานสนทนา/กระดานสนทนา
+ไปที่ส่วน [การสนทนา](https://github.com/fhdm-dev/scoppy/discussions) ของที่เก็บนี้เพื่อ ... หารือเกี่ยวกับ Scoppy ตัวอย่างเช่น ถามและตอบคำถาม ให้คำติชม ขอคุณสมบัติ รายงานข้อบกพร่อง แบ่งปันการออกแบบส่วนหน้าของคุณ หรือแสดงความคิดเห็นเกี่ยวกับอะไรก็ได้ที่เกี่ยวข้องกับ Scoppy, Oscilloscopes, Logic Analyzers หรืออุปกรณ์อิเล็กทรอนิกส์โดยทั่วไป
 
 ## Measuring different voltage ranges (oscilloscope mode)
 To remove the 0-3.3V input voltage limitation (and do whatever signal conditioning magic takes your fancy) you’ll need to add an [analog front end](https://oscilloscope.fhdm.xyz/wiki/Analog-Front-End). This can be as simple as a voltage divider or as complex as you want it to be. The [Documentation](https://oscilloscope.fhdm.xyz/) contains some [examples](https://oscilloscope.fhdm.xyz/wiki/Analog-Front-End-Examples) of simple and cheap AFE designs and you are encouraged to share your own front end designs and ideas with other Scoppiers. Just head to the [forum](https://github.com/fhdm-dev/scoppy/discussions).
